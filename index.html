@@ -4,26 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tomer Buber - Robotics Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* General Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f3f4f6;
+      background-color: #f0f2f5;
       color: #333;
     }
+
+    /* Header */
     header {
-      background-color: #282c34;
+      background-color: #4a90e2;
       color: #fff;
-      padding: 20px 0;
+      padding: 20px;
       text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5em;
     }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    /* Main Content */
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 20px auto;
       padding: 0 20px;
     }
@@ -33,35 +49,52 @@
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
     section h2 {
-      font-size: 1.5em;
-      color: #444;
+      font-size: 1.8em;
+      color: #333;
       text-align: center;
       margin-bottom: 10px;
     }
     section p {
       font-size: 1em;
       text-align: center;
-      color: #666;
+      color: #555;
+      line-height: 1.5;
     }
     iframe {
       display: block;
       margin: 20px auto;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .showcase {
-      text-align: center;
-    }
+
+    /* Links */
     .showcase a {
       text-decoration: none;
-      color: #007bff;
+      color: #4a90e2;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
     .showcase a:hover {
-      text-decoration: underline;
+      color: #1a73e8;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      iframe {
+        width: 100%;
+        height: 300px;
+      }
+      header h1 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
@@ -95,5 +128,8 @@
       <p>This project was showcased in the prestigious IEEE Spectrum: <a href="https://spectrum.ieee.org/video-friday-icra40?utm_source=roboticsnews&utm_medium=email&utm_campaign=roboticsnews-10-08-24&utm_content=httpsspectrumieeeorgvideofridayicra40&mkt_tok=NzU2LUdQSC04OTkAAAGWDHoqoS80JMbMeLVx-lGNP-2DUXhuyUn5bk6DgdtM-Pp8Mzj9ig2hHbFbV8e3x7uLMnZCou4I9dOGftCoeOfwzOrdao4ES8IJtFWl3S1OpZgb" target="_blank">IEEE Spectrum Feature</a></p>
     </section>
   </main>
+  <footer>
+    <p>© 2025 Tomer Buber | All Rights Reserved</p>
+  </footer>
 </body>
 </html>
