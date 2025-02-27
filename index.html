@@ -28,45 +28,42 @@
       font-size: 2.5em;
     }
 
-    /* Footer */
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-      font-size: 0.9em;
-    }
-
-    /* Main Content */
-    main {
-      max-width: 900px;
+    /* Main Layout */
+    .container {
+      display: flex;
+      max-width: 1200px;
       margin: 20px auto;
       padding: 0 20px;
+      gap: 20px;
     }
-    section {
-      margin-bottom: 30px;
-      padding: 20px;
+    
+    .column {
+      flex: 1;
       background: #fff;
+      padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    section:hover {
+
+    .column:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
-    section h2 {
+
+    .column h2 {
+      text-align: center;
       font-size: 1.8em;
       color: #333;
-      text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
-    section p {
+
+    .column p {
       font-size: 1em;
-      text-align: center;
       color: #555;
-      line-height: 1.5;
+      text-align: center;
     }
+
     iframe {
       display: block;
       margin: 20px auto;
@@ -75,19 +72,24 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    /* Links */
-    .showcase a {
-      text-decoration: none;
+    .column a {
+      display: block;
+      text-align: center;
       color: #4a90e2;
       font-weight: bold;
+      text-decoration: none;
       transition: color 0.3s ease;
     }
-    .showcase a:hover {
+
+    .column a:hover {
       color: #1a73e8;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
       iframe {
         width: 100%;
         height: 300px;
@@ -100,45 +102,45 @@
 </head>
 <body>
   <header>
-    <h1>Tomer Buber - Robotics Projects</h1>
+    <h1>Tomer Buber - Robotics Projects & Research</h1>
   </header>
-  <main>
-    <section>
-      <h2>UR5 Jenga Builder: Basic Robotic Maneuvers</h2>
-      <p>An algorithm to make the UR5 robotic arm build a Jenga blocks tower.</p>
-      <iframe src="https://drive.google.com/file/d/1A-6-TIeanshekAyVUrLMxR4U8fNAq90k/preview" width="640" height="480" allow="autoplay"></iframe>
-    </section>
-    <section>
-      <h2>UR5 Jenga Player: Vision-Guided Robotics</h2>
-      <p>Implementing object detection and tracking with the UR5 robotic arm.</p>
-      <iframe src="https://drive.google.com/file/d/1EzprJBN2vSc7G7uRdhrprDf7a_8EoHnN/preview" width="640" height="480" allow="autoplay"></iframe>
-    </section>
-    <section>
-      <h2>Project 3: Sim2Real Work in Progress</h2>
-      <p>Converting 3D simulation coordinates into a format compatible with a real-world robotic framework.</p>
-      <iframe src="https://drive.google.com/file/d/1cXhEyQVOW2YtMj1xlACfraeIpsIHNBxL/preview" width="640" height="480" allow="autoplay"></iframe>
-    </section>
-    <section>
-      <h2>Robotic Arm Solving the Alpha Puzzle</h2>
-      <p>Watch the UR5 robotic arm solve the Alpha Puzzle using advanced algorithms.</p>
-      <iframe src="https://www.cgl.cs.tau.ac.il/projects/a-first-demonstration-of-a-robotic-arm-solving-the-alpha-puzzle/" width="640" height="480"></iframe>
-    </section>
-    <section class="showcase">
-      <h2>Featured in IEEE Spectrum</h2>
-      <p>This project was showcased in the prestigious IEEE Spectrum: 
-        <a href="https://spectrum.ieee.org/video-friday-icra40?utm_source=roboticsnews&utm_medium=email&utm_campaign=roboticsnews-10-08-24&utm_content=httpsspectrumieeeorgvideofridayicra40&mkt_tok=NzU2LUdQSC04OTkAAAGWDHoqoS80JMbMeLVx-lGNP-2DUXhuyUn5bk6DgdtM-Pp8Mzj9ig2hHbFbV8e3x7uLMnZCou4I9dOGftCoeOfwzOrdao4ES8IJtFWl3S1OpZgb#8lbmsy1ycnc" target="_blank">
-          IEEE Spectrum Feature
-        </a>
-      </p>
+  <main class="container">
+    
+    <!-- Left Column: Robotics Projects -->
+    <section class="column">
+      <h2>Robotics Projects</h2>
+      <section>
+        <h3>UR5 Jenga Builder: Basic Robotic Maneuvers</h3>
+        <p>An algorithm to make the UR5 robotic arm build a Jenga blocks tower.</p>
+        <iframe src="https://drive.google.com/file/d/1A-6-TIeanshekAyVUrLMxR4U8fNAq90k/preview" width="640" height="480" allow="autoplay"></iframe>
+      </section>
+      <section>
+        <h3>UR5 Jenga Player: Vision-Guided Robotics</h3>
+        <p>Implementing object detection and tracking with the UR5 robotic arm.</p>
+        <iframe src="https://drive.google.com/file/d/1EzprJBN2vSc7G7uRdhrprDf7a_8EoHnN/preview" width="640" height="480" allow="autoplay"></iframe>
+      </section>
+      <section>
+        <h3>Project 3: Sim2Real Work in Progress</h3>
+        <p>Converting 3D simulation coordinates into a format compatible with a real-world robotic framework.</p>
+        <iframe src="https://drive.google.com/file/d/1cXhEyQVOW2YtMj1xlACfraeIpsIHNBxL/preview" width="640" height="480" allow="autoplay"></iframe>
+      </section>
     </section>
 
-    <section class="showcase">
+    <!-- Right Column: Publications -->
+    <section class="column">
       <h2>Publications</h2>
-      <p>Check out our latest research on UAV localization:  
+      <section>
+        <h3>Robotic Arm Solving the Alpha Puzzle</h3>
+        <p>Watch the UR5 robotic arm solve the Alpha Puzzle using advanced algorithms.</p>
+        <iframe src="https://www.cgl.cs.tau.ac.il/projects/a-first-demonstration-of-a-robotic-arm-solving-the-alpha-puzzle/" width="640" height="480"></iframe>
+      </section>
+      <section>
+        <h3>UAV Localization with a Low-Cost ToF Sensor</h3>
+        <p>Read our latest research on UAV localization:</p>
         <a href="https://www.cgl.cs.tau.ac.il/projects/demonstrating-effective-indoor-uav-localization-with-a-low-cost-tof-sensor-crown/" target="_blank">
           Demonstrating Effective Indoor UAV Localization with a Low-Cost ToF Sensor
         </a>
-      </p>
+      </section>
     </section>
 
   </main>
