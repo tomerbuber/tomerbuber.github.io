@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications</title>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52FTJF89X"></script>
@@ -39,7 +39,7 @@
     .publication {
       background: white;
       padding: 15px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
@@ -53,18 +53,36 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .publication a {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 1.2em;
-      color: #4a90e2;
-      font-weight: bold;
-      text-decoration: none;
-      transition: color 0.3s ease;
+    .image-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
     }
 
-    .publication a:hover {
-      color: #1a73e8;
+    .image-group img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .button-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4a90e2;
+      color: white !important;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-link:hover {
+      background-color: #1a73e8;
     }
 
     .back-link {
@@ -78,33 +96,47 @@
 <body>
   <header>Publications</header>
   <div class="container">
+
+    <!-- Alpha Puzzle -->
     <div class="publication">
       <h3>Robotic Arm Solving the Alpha Puzzle</h3>
       <p>Watch the UR5 robotic arm solve the Alpha Puzzle using advanced algorithms.</p>
+      <p><strong>Presented at ICRA 40</strong></p>
       <img src="alphapuzzledemon.png" alt="Robotic Arm Solving the Alpha Puzzle">
-      <a href="https://www.cgl.cs.tau.ac.il/projects/a-first-demonstration-of-a-robotic-arm-solving-the-alpha-puzzle/" target="_blank">
+      <a href="https://www.cgl.cs.tau.ac.il/projects/a-first-demonstration-of-a-robotic-arm-solving-the-alpha-puzzle/" 
+         target="_blank" 
+         class="button-link">
         Read More about the Alpha Puzzle Solution
       </a>
     </div>
 
+    <!-- ICRA 2025 -->
     <div class="publication">
       <h3>Indoor Localization of UAVs Using Few Measurements</h3>
       <p><strong>Accepted to ICRA (acceptance rate: 38.67%)</strong></p>
       <p>This work presents a novel output-sensitive method for UAV localization using minimal data.</p>
-      <img src="ICRA2025_1.png" alt="ICRA 2025 Paper">
-      <a href="https://www.cgl.cs.tau.ac.il/projects/indoor-localization-of-uavs-using-only-few-measurements-by-output-sensitive-preimage-intersection/" target="_blank">
+      <div class="image-group">
+        <img src="ICRA2025_1.png" alt="ICRA 2025 Image 1">
+      </div>
+      <a href="https://www.cgl.cs.tau.ac.il/projects/indoor-localization-of-uavs-using-only-few-measurements-by-output-sensitive-preimage-intersection/"
+         target="_blank"
+         class="button-link">
         View Project Page
       </a>
     </div>
 
+    <!-- ToF Paper -->
     <div class="publication">
-      <h3>UAV Localization with a Low-Cost ToF Sensor</h3>
-      <p>Read our latest research on UAV localization:</p>
+      <h3>UAV Localization with a Low-Cost ToF Sensor (2.0)</h3>
+      <p>We present an open-source software for UAV localization in a known environment, using only a few distance measurements.</p>
       <img src="dronepic.png" alt="UAV Localization Research">
-      <a href="https://www.cgl.cs.tau.ac.il/projects/demonstrating-effective-indoor-uav-localization-with-a-low-cost-tof-sensor-crown/" target="_blank">
+      <a href="https://www.cgl.cs.tau.ac.il/projects/demonstrating-effective-indoor-uav-localization-with-a-low-cost-tof-sensor-crown/" 
+         target="_blank" 
+         class="button-link">
         Demonstrating Effective Indoor UAV Localization with a Low-Cost ToF Sensor
       </a>
     </div>
+
   </div>
 
   <a href="index.html" class="back-link">⬅ Back to Home</a>
