@@ -1,94 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Robotics Projects</title>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52FTJF89X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'G-W52FTJF89X');
-    </script>
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52FTJF89X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W52FTJF89X');
+  </script>
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f0f2f5;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #4a90e2;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 2em;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-
-    .project {
-      background: white;
-      padding: 15px;
-      margin-bottom: 20px;
+    iframe {
+      width: 100%;
+      height: 500px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .project h3 {
-      font-size: 1.4em;
-      margin-bottom: 10px;
-    }
-
-    .project iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px; /* Improved aspect ratio */
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .back-link {
-      display: block;
-      text-align: center;
-      margin: 20px 0;
-      font-size: 1.2em;
     }
   </style>
 </head>
 <body>
-  <header>Robotics Projects</header>
-  <div class="container">
-    <div class="project">
-      <h3>UR5 Jenga Builder</h3>
-      <p>An algorithm to make the UR5 robotic arm build a Jenga blocks tower.</p>
-      <iframe src="https://drive.google.com/file/d/1A-6-TIeanshekAyVUrLMxR4U8fNAq90k/preview" allow="autoplay"></iframe>
-    </div>
-    
-    <div class="project">
-      <h3>UR5 Jenga Player</h3>
-      <p>Implementing object detection and tracking with the UR5 robotic arm.</p>
-      <iframe src="https://drive.google.com/file/d/1EzprJBN2vSc7G7uRdhrprDf7a_8EoHnN/preview" allow="autoplay"></iframe>
-    </div>
+  <nav class="container-fluid">
+    <ul><li><strong>Tomer Buber</strong></li></ul>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html" role="button">Publications</a></li>
+    </ul>
+  </nav>
 
-    <div class="project">
-      <h3>Sim2Real Work in Progress</h3>
-      <p>Converting 3D simulation coordinates into a format compatible with a real-world robotic framework.</p>
-      <iframe src="https://drive.google.com/file/d/1cXhEyQVOW2YtMj1xlACfraeIpsIHNBxL/preview" allow="autoplay"></iframe>
-    </div>
-  </div>
+  <main class="container">
+    <div class="grid">
+      <section>
+        <hgroup>
+          <h2>Robotics Projects</h2>
+          <h3>Innovative applications using the UR5 robotic arm</h3>
+        </hgroup>
 
-  <a href="index.html" class="back-link">⬅ Back to Home</a>
+        <h3>UR5 Jenga Builder</h3>
+        <p>An algorithm to make the UR5 robotic arm build a Jenga blocks tower.</p>
+        <iframe src="https://drive.google.com/file/d/1A-6-TIeanshekAyVUrLMxR4U8fNAq90k/preview" allow="autoplay"></iframe>
+
+        <h3>UR5 Jenga Player</h3>
+        <p>Implementing object detection and tracking with the UR5 robotic arm.</p>
+        <iframe src="https://drive.google.com/file/d/1EzprJBN2vSc7G7uRdhrprDf7a_8EoHnN/preview" allow="autoplay"></iframe>
+
+        <h3>Sim2Real Work in Progress</h3>
+        <p>Converting 3D simulation coordinates into a format compatible with a real-world robotic framework.</p>
+        <iframe src="https://drive.google.com/file/d/1cXhEyQVOW2YtMj1xlACfraeIpsIHNBxL/preview" allow="autoplay"></iframe>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    <small><a href="index.html">Home</a> • <a href="publications.html">Publications</a></small>
+  </footer>
 </body>
 </html>

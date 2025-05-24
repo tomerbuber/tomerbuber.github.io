@@ -1,103 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Publications</title>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52FTJF89X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'G-W52FTJF89X');
-    </script>
-  
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f0f2f5;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #4a90e2;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 2em;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-
-    .publication {
-      background: white;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .publication img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .publication a {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 1.2em;
-      color: #4a90e2;
-      font-weight: bold;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .publication a:hover {
-      color: #1a73e8;
-    }
-
-    .back-link {
-      display: block;
-      text-align: center;
-      margin: 20px 0;
-      font-size: 1.2em;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52FTJF89X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W52FTJF89X');
+  </script>
 </head>
 <body>
-  <header>Publications</header>
-  <div class="container">
-    <div class="publication">
-      <h3>Robotic Arm Solving the Alpha Puzzle</h3>
-      <p>Watch the UR5 robotic arm solve the Alpha Puzzle using advanced algorithms.</p>
-      <img src="alphapuzzledemon.png"  alt="Robotic Arm Solving the Alpha Puzzle">
-      <a href="https://www.cgl.cs.tau.ac.il/projects/a-first-demonstration-of-a-robotic-arm-solving-the-alpha-puzzle/" target="_blank">
-        Read More about the Alpha Puzzle Solution
-      </a>
-    </div>
+  <nav class="container-fluid">
+    <ul><li><strong>Tomer Buber</strong></li></ul>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html" role="button">Publications</a></li>
+    </ul>
+  </nav>
 
-    <div class="publication">
-      <h3>UAV Localization with a Low-Cost ToF Sensor</h3>
-      <p>Read our latest research on UAV localization:</p>
-      <img src="dronepic.png" alt="UAV Localization Research">
-      <a href="https://www.cgl.cs.tau.ac.il/projects/demonstrating-effective-indoor-uav-localization-with-a-low-cost-tof-sensor-crown/" target="_blank">
-        Demonstrating Effective Indoor UAV Localization with a Low-Cost ToF Sensor
-      </a>
-    </div>
-  </div>
+  <main class="container">
+    <div class="grid">
+      <section>
+        <hgroup>
+          <h2>Publications</h2>
+          <h3>Selected works in robotics research</h3>
+        </hgroup>
 
-  <a href="index.html" class="back-link">⬅ Back to Home</a>
+        <h3>Robotic Arm Solving the Alpha Puzzle</h3>
+        <p>Watch the UR5 robotic arm solve the Alpha Puzzle using advanced algorithms.</p>
+        <figure>
+          <img src="alphapuzzledemon.png" alt="Robotic Arm Solving the Alpha Puzzle" />
+          <figcaption>
+            <a href="https://www.cgl.cs.tau.ac.il/projects/a-first-demonstration-of-a-robotic-arm-solving-the-alpha-puzzle/" target="_blank">
+              Read More about the Alpha Puzzle Solution
+            </a>
+          </figcaption>
+        </figure>
+
+        <h3>Indoor Localization of UAVs Using Few Measurements</h3>
+        <p>A novel output-sensitive method for UAV localization using minimal data.</p>
+        <p><strong>Accepted to ICRA 2025</strong> (Acceptance rate: 38.67%)</p>
+        <figure>
+          <img src="ICRA2025_1.png" alt="ICRA 2025 Paper Figure 1" />
+        </figure>
+        <figure>
+          <img src="ICRA2025_2.png" alt="ICRA 2025 Paper Figure 2" />
+          <figcaption>
+            <a href="https://www.cgl.cs.tau.ac.il/projects/indoor-localization-of-uavs-using-only-few-measurements-by-output-sensitive-preimage-intersection/" target="_blank">
+              Read the Project Overview
+            </a>
+          </figcaption>
+        </figure>
+
+        <h3>UAV Localization with a Low-Cost ToF Sensor</h3>
+        <p>Read our latest research on UAV localization:</p>
+        <figure>
+          <img src="dronepic.png" alt="UAV Localization Research" />
+          <figcaption>
+            <a href="https://www.cgl.cs.tau.ac.il/projects/demonstrating-effective-indoor-uav-localization-with-a-low-cost-tof-sensor-crown/" target="_blank">
+              Demonstrating Effective Indoor UAV Localization with a Low-Cost ToF Sensor
+            </a>
+          </figcaption>
+        </figure>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    <small><a href="index.html">Home</a> • <a href="projects.html">Projects</a></small>
+  </footer>
 </body>
 </html>
