@@ -1,0 +1,24 @@
+.project {
+    background: white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.project iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px; /* Improved aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
