@@ -1,44 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tomer Buber - Robotics & Research</title>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52FTJF89X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'G-W52FTJF89X');
-    </script>
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tomer Buber</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+    html {
+      scroll-behavior: smooth;
+    }
+
+    nav ul {
+      align-items: center;
+    }
+
+    .section-grey {
+      background-color: #f5f5f5;
+      padding: 4rem 1rem;
+    }
+
+    .section-white {
+      background-color: #ffffff;
+      padding: 4rem 1rem;
+    }
+
+    .project-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    .project iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border-radius: 8px;
+      margin-top: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .project {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-icons img {
+      width: 40px;
+      height: 40px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+      font-weight: 400;
+    }
+
+    section article {
+      margin-bottom: 3rem;
+    }
   </style>
-  <link rel="stylesheet" href="style/base.css">
-  <link rel="stylesheet" href="style/index.css">
 </head>
+
 <body>
-  <header class="index">Tomer Buber - Robotics & Research</header>
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>Tomer Buber</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <div class="container-index">
-    <h2>Explore My Work</h2>
-    
-    <div class="work-section">
-      <a href="projects.html" class="work-item">
-        <img src="img/thumbnails/robotics-projects.jpg" alt="Robotics Projects">
-        <div class="overlay">Robotics Projects</div>
-      </a>
-      
-      <a href="publications.html" class="work-item">
-        <img src="img/thumbnails/Publications.png" alt="Publications">
-        <div class="overlay">Publications</div>
-      </a>
+  <main class="container section-white">
+    <section>
+      <h1>Robotics & Research</h1>
+      <h3>Robots, Sim2Real, Algorithms</h3>
+    </section>
+  </main>
+
+  <section id="publications" class="section-grey">
+    <div class="container">
+      <h2>Publications</h2>
+
+      <article>
+        <h3>UAV Localization with a Low-Cost ToF Sensor (2.0)</h3>
+        <p>We present an open-source software for UAV localization in a known environment, using only a few distance measurements.</p>
+        <img src="img/publications/dronepic.png" alt="UAV Localization Research" class="project-img" />
+        <p><a href="https://www.cgl.cs.tau.ac.il/projects/demonstrating-effective-indoor-uav-localization-with-a-low-cost-tof-sensor-crown/" target="_blank">Project Page</a></p>
+      </article>
+
+      <article>
+        <h3>Indoor Localization of UAVs Using Few Measurements</h3>
+        <p><strong>Presented at ICRA 2025 (acceptance rate: 38.67%)</strong></p>
+        <p>This work presents a novel output-sensitive method for UAV localization using minimal data.</p>
+        <img src="img/publications/ICRA2025_1.png" alt="ICRA 2025 Image" class="project-img" />
+        <p><a href="https://www.cgl.cs.tau.ac.il/projects/indoor-localization-of-uavs-using-only-few-measurements-by-output-sensitive-preimage-intersection/" target="_blank">View Project</a></p>
+      </article>
+
+      <article>
+        <h3>Robotic Arm Solving the Alpha Puzzle</h3>
+        <p><strong>Presented at ICRA@40 and showcased in IEEE Spectrum:</strong>
+          <a href="https://spectrum.ieee.org/video-friday-icra40?utm_source=roboticsnews&utm_medium=email&utm_campaign=roboticsnews-10-08-24&utm_content=httpsspectrumieeeorgvideofridayicra40&mkt_tok=NzU2LUdQSC04OTkAAAGWDHoqoS80JMbMeLVx-lGNP-2DUXhuyUn5bk6DgdtM-Pp8Mzj9ig2hHbFbV8e3x7uLMnZCou4I9dOGftCoeOfwzOrdao4ES8IJtFWl3S1OpZgb#8lbmsy1ycnc" target="_blank">IEEE Spectrum Feature</a>
+        </p>
+        <img src="img/publications/alphapuzzledemon.png" alt="Alpha Puzzle" class="project-img" />
+        <p><a href="https://www.cgl.cs.tau.ac.il/projects/a-first-demonstration-of-a-robotic-arm-solving-the-alpha-puzzle/" target="_blank">Read More</a></p>
+      </article>
     </div>
-  </div>
+  </section>
 
-  <!-- <a href="index.html"><img src="img/misc/pic.jpg" alt="Fixed" class="fixed-image"></a> -->
+  <section id="projects" class="section-white">
+    <div class="container">
+      <h2>Projects</h2>
+      <h3>Hands-On Robotic Experiments</h3>
+
+      <div class="project">
+        <h3>UR5 Jenga Builder</h3>
+        <p>An algorithm to make the UR5 robotic arm build a Jenga blocks tower.</p>
+        <iframe src="https://drive.google.com/file/d/1A-6-TIeanshekAyVUrLMxR4U8fNAq90k/preview" allow="autoplay"></iframe>
+      </div>
+
+      <div class="project">
+        <h3>UR5 Jenga Player</h3>
+        <p>Implementing object detection and tracking with the UR5 robotic arm.</p>
+        <iframe src="https://drive.google.com/file/d/1EzprJBN2vSc7G7uRdhrprDf7a_8EoHnN/preview" allow="autoplay"></iframe>
+      </div>
+
+      <div class="project">
+        <h3>Sim2Real Work in Progress</h3>
+        <p>Converting 3D simulation coordinates into a format compatible with a real-world robotic framework.</p>
+        <iframe src="https://drive.google.com/file/d/1cXhEyQVOW2YtMj1xlACfraeIpsIHNBxL/preview" allow="autoplay"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-grey">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-icons">
+        <a href="tombub@gmail.com"><img src="img/misc/email.png"  /></a>
+        <a href="https://github.com/tomerbuber" target="_blank"><img src="img/misc/github.png"  /></a>
+        <a href="https://www.linkedin.com/in/tomerbuber" target="_blank"><img src="img/misc/linkedin.png" /></a>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>
