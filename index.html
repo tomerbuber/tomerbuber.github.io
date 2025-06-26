@@ -74,6 +74,20 @@
     section article {
       margin-bottom: 3rem;
     }
+    .video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 8px;
+  border: none;
+}
+
   </style>
 </head>
 
@@ -127,40 +141,46 @@
   </section>
 
   <section id="projects" class="section-white">
-    <div class="container">
-      <h2>Projects</h2>
-      <h3>Hands-On Robotic Experiments</h3>
-
-      <div class="project">
-        <h3>UR5 Jenga Builder</h3>
-        <p>An algorithm to make the UR5 robotic arm build a Jenga blocks tower.</p>
-        <iframe src="https://drive.google.com/file/d/1A-6-TIeanshekAyVUrLMxR4U8fNAq90k/preview" allow="autoplay"></iframe>
-      </div>
-
-      <div class="project">
-        <h3>UR5 Jenga Player</h3>
-        <p>Implementing object detection and tracking with the UR5 robotic arm.</p>
-        <iframe src="https://drive.google.com/file/d/1EzprJBN2vSc7G7uRdhrprDf7a_8EoHnN/preview" allow="autoplay"></iframe>
-      </div>
-
-      <div class="project">
-        <h3>Sim2Real Work in Progress</h3>
-        <p>Converting 3D simulation coordinates into a format compatible with a real-world robotic framework.</p>
-        <iframe src="https://drive.google.com/file/d/1cXhEyQVOW2YtMj1xlACfraeIpsIHNBxL/preview" allow="autoplay"></iframe>
+  <div class="container">
+    <h2>Robotics Projects</h2>
+    
+    <div class="project">
+      <h3>UR5 Jenga Builder</h3>
+      <p>An algorithm to make the UR5 robotic arm build a Jenga blocks tower.</p>
+      <div class="video-wrapper">
+        <iframe src="https://drive.google.com/file/d/1A-6-TIeanshekAyVUrLMxR4U8fNAq90k/preview" allow="autoplay" allowfullscreen></iframe>
       </div>
     </div>
-  </section>
 
-  <section id="contact" class="section-grey">
-    <div class="container">
-      <h2>Contact</h2>
-      <div class="contact-icons">
-        <a href="tombub@gmail.com"><img src="img/misc/email.png"  /></a>
-        <a href="https://github.com/tomerbuber" target="_blank"><img src="img/misc/github.png"  /></a>
-        <a href="https://www.linkedin.com/in/tomerbuber" target="_blank"><img src="img/misc/linkedin.png" /></a>
+    <div class="project">
+      <h3>UR5 Jenga Player</h3>
+      <p>Implementing object detection and tracking with the UR5 robotic arm.</p>
+      <div class="video-wrapper">
+        <iframe src="https://drive.google.com/file/d/1EzprJBN2vSc7G7uRdhrprDf7a_8EoHnN/preview" allow="autoplay" allowfullscreen></iframe>
       </div>
     </div>
-  </section>
+
+    <div class="project">
+      <h3>Sim2Real Work in Progress</h3>
+      <p>Converting 3D simulation coordinates into a format compatible with a real-world robotic framework.</p>
+      <div class="video-wrapper">
+        <iframe src="https://drive.google.com/file/d/1cXhEyQVOW2YtMj1xlACfraeIpsIHNBxL/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section-grey">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="contact-icons">
+      <a href="mailto:tombub@gmail.com"><img src="img/misc/email.png" alt="Email Icon" /></a>
+      <a href="https://github.com/tomerbuber" target="_blank"><img src="img/misc/github.png" alt="GitHub Icon" /></a>
+      <a href="https://www.linkedin.com/in/tomer-buber-839b3118b/" target="_blank"><img src="img/misc/linkedin.png" alt="LinkedIn Icon" /></a>
+    </div>
+  </div>
+</section>
+
 </body>
 
 </html>
