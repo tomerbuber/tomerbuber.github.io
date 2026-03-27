@@ -32,6 +32,15 @@
       margin: 1rem 0;
     }
 
+    .publication-thumb {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1rem auto;
+      display: block;
+    }
+
     .project iframe {
       width: 100%;
       max-width: 800px;
@@ -113,6 +122,14 @@
   <section id="publications" class="section-grey">
     <div class="container">
       <h2>Publications</h2>
+
+      <article>
+        <h3>Lifelong Localization in Dynamic Indoor Environments Combining Odometry with Sparse Distance Sampling</h3>
+        <p><strong>To Be Presented at ICRA 2026 (acceptance rate: 38.04%)</strong></p>
+        <p>We present a lifelong localization framework for planar indoor environments that fuses wheel odometry with sparse LiDAR range measurements into a pose prior integrated over time. We prove convergence to ground truth in static maps and extend the framework to dynamic scenes under learned obstacle dynamics. Empirically, we match dense SLAM-level accuracy using only sixteen sparse measurements, with large savings in sensing cost and bandwidth; open-source code is linked from the project page.</p>
+        <img src="img/publications/icra2026.png" alt="ICRA 2026: lifelong localization with sparse distance sampling" class="publication-thumb" />
+        <p><a href="https://www.cgl.cs.tau.ac.il/projects/lifelong-localization-in-dynamic-indoor-environments-combining-odometry-with-sparse-distance-sampling/" target="_blank">View Project</a></p>
+      </article>
 
       <article>
         <h3>UAV Localization with a Low-Cost ToF Sensor (2.0)</h3>
