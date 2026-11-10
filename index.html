@@ -3,42 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tomer Buber - Robotics & Research</title>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52FTJF89X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'G-W52FTJF89X');
-    </script>
-  
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-  </style>
+  <title>Tomer Buber</title>
+  <meta name="description" content="Tomer Buber — M.Sc. student at the Computational Geometry Lab, Tel Aviv University, researching robotic grasping & manipulation and autonomous navigation & real-time motion planning. Algorithm Developer at SkyPulse.">
+
+  <!-- set theme before paint to avoid flash -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52FTJF89X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W52FTJF89X');
+  </script>
+
   <link rel="stylesheet" href="style/base.css">
   <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-  <header class="index">Tomer Buber - Robotics & Research</header>
 
-  <div class="container-index">
-    <h2>Explore My Work</h2>
-    
-    <div class="work-section">
-      <a href="projects.html" class="work-item">
-        <img src="img/thumbnails/robotics-projects.jpg" alt="Robotics Projects">
-        <div class="overlay">Robotics Projects</div>
-      </a>
-      
-      <a href="publications.html" class="work-item">
-        <img src="img/thumbnails/Publications.png" alt="Publications">
-        <div class="overlay">Publications</div>
-      </a>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="name">Tomer Buber</a>
+      <nav>
+        <a href="#research">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+      </nav>
     </div>
   </div>
 
-  <!-- <a href="index.html"><img src="img/misc/pic.jpg" alt="Fixed" class="fixed-image"></a> -->
+  <main class="wrap">
+
+    <!-- Intro -->
+    <section class="intro">
+      <img class="photo" src="img/misc/pic.jpg" alt="Tomer Buber">
+      <div class="who">
+        <h1>Tomer Buber</h1>
+        <p class="affil">
+          M.Sc. student ·
+          <a href="https://www.cgl.cs.tau.ac.il/" target="_blank" rel="noopener">Computational Geometry Lab</a>,
+          Tel Aviv University
+        </p>
+        <div class="socials">
+          <a href="https://github.com/tomerbuber" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/misc/github.png" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/tomer-buber/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/misc/linkedin.png" alt="LinkedIn"></a>
+          <a href="mailto:tomerbuber@mail.tau.ac.il" aria-label="Email"><img src="img/misc/email.png" alt="Email"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bio -->
+    <section class="bio section">
+      <p>
+        I'm a Master's student in the
+        <a href="https://www.cgl.cs.tau.ac.il/" target="_blank" rel="noopener">Computational Geometry Lab (CGL)</a>
+        at Tel Aviv University, where I research robotic
+        <b>grasping &amp; manipulation</b> and <b>autonomous navigation &amp; real-time motion planning</b>.
+      </p>
+      <p>
+        Alongside my research, I'm an <b>Algorithm Developer at SkyPulse</b>, where I turn
+        research-grade ideas into robust, deployable systems.
+      </p>
+    </section>
+
+    <!-- Research interests + Education, side by side -->
+    <div class="two-col">
+      <section id="research">
+        <h2 class="section-title">Research Interests</h2>
+        <ul class="interests">
+          <li>Robotics</li>
+          <li>Motion planning</li>
+          <li>Sim-to-real</li>
+          <li>Physical AI</li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2 class="section-title">Education</h2>
+        <ul class="edu">
+          <li>
+            <div class="place">M.Sc., Tel Aviv University <span class="when">present</span></div>
+            <div class="deg">Computational Geometry Lab (CGL) — robotics research</div>
+          </li>
+          <li>
+            <div class="place">B.Sc., Hebrew University of Jerusalem</div>
+            <div class="deg">Computer Science &amp; Cognitive Science</div>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2 class="section-title">Publications</h2>
+
+      <div class="entry">
+        <img class="thumb" src="img/publications/sdsl_main.png" alt="">
+        <div class="body">
+          <span class="venue">ICRA 2026 · acceptance rate 38.04%</span>
+          <h3><a href="https://www.cgl.cs.tau.ac.il/projects/lifelong-localization-in-dynamic-indoor-environments-combining-odometry-with-sparse-distance-sampling/" target="_blank" rel="noopener">Lifelong Localization in Dynamic Indoor Environments: Combining Odometry with Sparse Distance Sampling</a></h3>
+          <p>SLAM-comparable localization in dynamic indoor spaces using odometry and only 16 sparse distance measurements — no full LiDAR required.</p>
+          <div class="links"><a href="https://www.cgl.cs.tau.ac.il/projects/lifelong-localization-in-dynamic-indoor-environments-combining-odometry-with-sparse-distance-sampling/" target="_blank" rel="noopener">Project page →</a></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <img class="thumb" src="img/publications/ICRA2025_1.png" alt="">
+        <div class="body">
+          <span class="venue">ICRA 2025 · acceptance rate 38.67%</span>
+          <h3><a href="https://www.cgl.cs.tau.ac.il/projects/indoor-localization-of-uavs-using-only-few-measurements-by-output-sensitive-preimage-intersection/" target="_blank" rel="noopener">Indoor Localization of UAVs Using Few Measurements</a></h3>
+          <p>A novel output-sensitive method for UAV localization using minimal data.</p>
+          <div class="links"><a href="https://www.cgl.cs.tau.ac.il/projects/indoor-localization-of-uavs-using-only-few-measurements-by-output-sensitive-preimage-intersection/" target="_blank" rel="noopener">Project page →</a></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <img class="thumb" src="img/publications/dronepic.png" alt="">
+        <div class="body">
+          <h3><a href="https://www.cgl.cs.tau.ac.il/projects/demonstrating-effective-indoor-uav-localization-with-a-low-cost-tof-sensor-crown/" target="_blank" rel="noopener">UAV Localization with a Low-Cost ToF Sensor</a></h3>
+          <p>Open-source system for UAV localization in a known environment using only a few distance measurements.</p>
+          <div class="links"><a href="https://www.cgl.cs.tau.ac.il/projects/demonstrating-effective-indoor-uav-localization-with-a-low-cost-tof-sensor-crown/" target="_blank" rel="noopener">Project page →</a></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <img class="thumb" src="img/publications/alphapuzzledemon.png" alt="">
+        <div class="body">
+          <span class="venue">ICRA@40 · featured in IEEE Spectrum</span>
+          <h3><a href="https://www.cgl.cs.tau.ac.il/projects/a-first-demonstration-of-a-robotic-arm-solving-the-alpha-puzzle/" target="_blank" rel="noopener">Robotic Arm Solving the Alpha Puzzle</a></h3>
+          <p>The UR5 robotic arm solves the Alpha Puzzle using advanced motion-planning algorithms.</p>
+          <div class="links">
+            <a href="https://www.cgl.cs.tau.ac.il/projects/a-first-demonstration-of-a-robotic-arm-solving-the-alpha-puzzle/" target="_blank" rel="noopener">Project page →</a>
+            <a href="https://spectrum.ieee.org/video-friday-icra40" target="_blank" rel="noopener">IEEE Spectrum</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p class="proj-lead">Teaching the UR5 robotic arm to play and build with Jenga blocks.</p>
+
+      <div class="showcase-grid">
+        <figure class="showcase">
+          <div class="video">
+            <video src="media/jenga_play.mp4" autoplay loop muted playsinline preload="metadata"></video>
+          </div>
+          <figcaption><b>UR5 Jenga Player</b> — the arm plays Jenga using real-time object detection and tracking.</figcaption>
+        </figure>
+
+        <figure class="showcase">
+          <div class="video">
+            <video src="media/jenga_build.mp4" autoplay loop muted playsinline preload="metadata"></video>
+          </div>
+          <figcaption><b>UR5 Jenga Builder</b> — motion planning that drives the arm to build a Jenga tower.</figcaption>
+        </figure>
+      </div>
+
+      <a class="see-all" href="projects.html">All projects →</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© Tomer Buber · Tel Aviv University</span>
+      <span class="socials">
+        <a href="https://github.com/tomerbuber" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/misc/github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/tomer-buber/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/misc/linkedin.png" alt="LinkedIn"></a>
+        <a href="mailto:tomerbuber@mail.tau.ac.il" aria-label="Email"><img src="img/misc/email.png" alt="Email"></a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+
 </body>
 </html>

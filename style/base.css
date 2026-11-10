@@ -1,46 +1,149 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
+/* ============================================================
+   Tomer Buber — minimalist academic site
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg:        #ffffff;
+  --text:      #1a1a1a;
+  --muted:     #6b7280;
+  --faint:     #9ca3af;
+  --line:      #ececec;
+  --card:      #fafafa;
+  --link:      #2563eb;
+  --link-hover:#1d4ed8;
+  --maxw:      720px;
 }
 
-header {
-    background-color: #4a90e2;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 2em;
+:root[data-theme="dark"] {
+  --bg:        #0f1115;
+  --text:      #e7e9ee;
+  --muted:     #9aa3b2;
+  --faint:     #6b7482;
+  --line:      #22262e;
+  --card:      #161920;
+  --link:      #7aa2ff;
+  --link-hover:#9bb8ff;
 }
 
-.container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-.container h3 {
-    font-size: 1.5em;
-}
-.container p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-
-.back-link {
-    display: block;
-    text-align: center;
-    margin: 20px 0;
-    font-size: 1.2em;
-}
-
-.fixed-image {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 200px; /* adjust as needed */
-    height: auto;
-    z-index: 1000; /* ensures it stays on top */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:        #0f1115;
+    --text:      #e7e9ee;
+    --muted:     #9aa3b2;
+    --faint:     #6b7482;
+    --line:      #22262e;
+    --card:      #161920;
+    --link:      #7aa2ff;
+    --link-hover:#9bb8ff;
   }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  transition: background .25s ease, color .25s ease;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3 { line-height: 1.25; font-weight: 700; letter-spacing: -.01em; }
+
+/* ---------- Top bar ---------- */
+.topbar {
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(140%) blur(10px);
+}
+.topbar-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.topbar .name {
+  font-weight: 700; color: var(--text); font-size: .98rem;
+}
+.topbar .name:hover { text-decoration: none; }
+.topbar nav { display: flex; align-items: center; gap: 20px; }
+.topbar nav a {
+  color: var(--muted); font-size: .94rem; font-weight: 500;
+}
+.topbar nav a:hover { color: var(--text); text-decoration: none; }
+.topbar nav a.active { color: var(--text); }
+
+/* theme toggle */
+.theme-toggle {
+  background: none; border: 1px solid var(--line); color: var(--muted);
+  width: 34px; height: 34px; border-radius: 8px; cursor: pointer;
+  display: grid; place-items: center; font-size: 1rem; line-height: 1;
+  transition: border-color .2s, color .2s;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--faint); }
+
+/* ---------- Sections ---------- */
+.section { padding: 10px 0 8px; }
+.section + .section { margin-top: 18px; }
+
+h2.section-title {
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--faint);
+  font-weight: 600;
+  margin: 40px 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 64px;
+  padding: 28px 0 48px;
+  color: var(--faint);
+  font-size: .88rem;
+}
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; }
+.site-footer a { color: var(--muted); }
+
+/* ---------- Social icon row ---------- */
+.socials { display: flex; gap: 14px; align-items: center; }
+.socials a {
+  display: inline-grid; place-items: center;
+  width: 20px; height: 20px; opacity: .75;
+  transition: opacity .2s, transform .2s;
+}
+.socials a:hover { opacity: 1; transform: translateY(-1px); }
+.socials img { width: 20px; height: 20px; }
+/* keep icons legible on dark backgrounds */
+:root[data-theme="dark"] .socials img,
+:root[data-theme="dark"] .back img { filter: invert(1) brightness(1.4); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .socials img { filter: invert(1) brightness(1.4); }
+}
+
+/* ---------- Back link ---------- */
+.back {
+  display: inline-block; margin: 36px 0 0;
+  color: var(--muted); font-weight: 500;
+}

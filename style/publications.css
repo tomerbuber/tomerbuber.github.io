@@ -1,51 +1,59 @@
+/* ============================================================
+   Publications page — minimalist
+   ============================================================ */
+
 .publication {
-    background: white;
-    padding-top: 20px;
-    padding-bottom: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+.publication:last-of-type { border-bottom: 0; }
+
+.publication h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.publication p {
+  color: var(--muted);
+  font-size: .98rem;
+  margin: 0 0 16px;
+}
+
+.pub-badge {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  color: var(--link);
+  border: 1px solid var(--line);
+  padding: 4px 11px;
+  border-radius: 999px;
+  margin-bottom: 12px;
 }
 
 .publication img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 540px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 0 0 16px;
 }
 
 .image-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
 }
-
-.image-group img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+.image-group img { max-width: 380px; margin: 0; }
 
 .button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4a90e2;
-    color: white !important;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: .95rem;
+  color: var(--link);
 }
-
-.button-link:hover {
-    background-color: #1a73e8;
-}
+.button-link:hover { color: var(--link-hover); }

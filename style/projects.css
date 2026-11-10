@@ -1,24 +1,44 @@
+/* ============================================================
+   Projects page — minimalist
+   ============================================================ */
+
 .project {
-    background: white;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
 }
+.project:last-of-type { border-bottom: 0; }
 
 .project h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project p {
+  color: var(--muted);
+  font-size: .98rem;
+  margin: 0 0 16px;
+}
+
+.project .tag {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--link);
+  border: 1px solid var(--line);
+  padding: 3px 9px;
+  border-radius: 999px;
 }
 
 .project iframe {
-    width: 100%;
-    max-width: 800px;
-    height: 450px; /* Improved aspect ratio */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
 }

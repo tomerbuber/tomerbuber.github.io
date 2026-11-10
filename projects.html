@@ -3,46 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robotics Projects</title>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52FTJF89X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'G-W52FTJF89X');
-    </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-  </style>
+  <title>Projects — Tomer Buber</title>
+  <meta name="description" content="Robotics projects by Tomer Buber — UR5 robotic arm algorithms, object detection and tracking, and sim-to-real transfer.">
+
+  <script>
+    (function () { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); })();
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52FTJF89X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W52FTJF89X');
+  </script>
+
   <link rel="stylesheet" href="style/base.css">
   <link rel="stylesheet" href="style/projects.css">
 </head>
 <body>
-  <header>Robotics Projects</header>
-  <div class="container">
-    <div class="project">
-      <h3>UR5 Jenga Builder</h3>
-      <p>An algorithm to make the UR5 robotic arm build a Jenga blocks tower.</p>
-      <iframe src="https://drive.google.com/file/d/1A-6-TIeanshekAyVUrLMxR4U8fNAq90k/preview" allow="autoplay"></iframe>
-    </div>
-    
-    <div class="project">
-      <h3>UR5 Jenga Player</h3>
-      <p>Implementing object detection and tracking with the UR5 robotic arm.</p>
-      <iframe src="https://drive.google.com/file/d/1EzprJBN2vSc7G7uRdhrprDf7a_8EoHnN/preview" allow="autoplay"></iframe>
-    </div>
 
-    <div class="project">
-      <h3>Sim2Real Work in Progress</h3>
-      <p>Converting 3D simulation coordinates into a format compatible with a real-world robotic framework.</p>
-      <iframe src="https://drive.google.com/file/d/1cXhEyQVOW2YtMj1xlACfraeIpsIHNBxL/preview" allow="autoplay"></iframe>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="name">Tomer Buber</a>
+      <nav>
+        <a href="index.html#research">Research</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="publications.html">Publications</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+      </nav>
     </div>
   </div>
 
-  <a href="index.html" class="back-link">⬅ Back to Home</a>
+  <main class="wrap">
+    <h2 class="section-title" style="margin-top:48px;">Projects</h2>
 
-  <!-- <a href="index.html"><img src="img/misc/pic.jpg" alt="Fixed" class="fixed-image"></a> -->
+    <article class="project">
+      <h3>UR5 Jenga Builder</h3>
+      <p>An algorithm that drives the UR5 robotic arm to build a tower of Jenga blocks.</p>
+      <iframe src="https://drive.google.com/file/d/1A-6-TIeanshekAyVUrLMxR4U8fNAq90k/preview" allow="autoplay" loading="lazy"></iframe>
+    </article>
+
+    <article class="project">
+      <h3>UR5 Jenga Player</h3>
+      <p>Object detection and tracking integrated with the UR5 robotic arm.</p>
+      <iframe src="https://drive.google.com/file/d/1EzprJBN2vSc7G7uRdhrprDf7a_8EoHnN/preview" allow="autoplay" loading="lazy"></iframe>
+    </article>
+
+    <article class="project">
+      <h3>Sim2Real <span class="tag">Work in progress</span></h3>
+      <p>Converting 3D simulation coordinates into a format compatible with a real-world robotic framework.</p>
+      <iframe src="https://drive.google.com/file/d/1cXhEyQVOW2YtMj1xlACfraeIpsIHNBxL/preview" allow="autoplay" loading="lazy"></iframe>
+    </article>
+
+    <a href="index.html" class="back">← Back to home</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© Tomer Buber · Tel Aviv University</span>
+      <span class="socials">
+        <a href="https://github.com/tomerbuber" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/misc/github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/tomer-buber/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/misc/linkedin.png" alt="LinkedIn"></a>
+        <a href="mailto:tomerbuber@mail.tau.ac.il" aria-label="Email"><img src="img/misc/email.png" alt="Email"></a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
 </body>
 </html>
